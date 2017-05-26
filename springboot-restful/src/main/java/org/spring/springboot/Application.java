@@ -39,6 +39,9 @@ public class Application  extends WebMvcConfigurerAdapter implements EmbeddedSer
 		container.setPort(8090);
 	}
 	
+	/**
+	 * 静态文件
+	 */
 	@Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
         registry.addResourceHandler("/static/**").addResourceLocations("classpath:/static/");
