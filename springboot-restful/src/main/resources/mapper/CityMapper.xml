@@ -57,4 +57,9 @@
 		where
 			id = #{id}
 	</delete>
+	<select id="getCityList" resultMap="BaseResultMap" parameterType="org.spring.springboot.domain.City">
+		select
+		<include refid="Base_Column_List" />
+		from city
+	</select>
 </mapper>

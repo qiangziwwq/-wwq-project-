@@ -18,6 +18,7 @@
     <properties>
         <mybatis-spring-boot>1.2.0</mybatis-spring-boot>
         <mysql-connector>5.1.39</mysql-connector>
+        <pagehelper.version>1.1.0</pagehelper.version>
     </properties>
 
     <dependencies>
@@ -68,13 +69,47 @@
             <artifactId>mysql-connector-java</artifactId>
             <version>${mysql-connector}</version>
         </dependency>
-
+        <!--pagehelper  -->
+		 <!-- <dependency>  
+	        <groupId>com.github.pagehelper</groupId>  
+      		<artifactId>pagehelper-spring-boot-starter</artifactId>  
+     		<version>${pagehelper.version}</version>  
+   		</dependency> -->
+   		<!--mapper-->
+		<!-- <dependency>
+		    <groupId>tk.mybatis</groupId>
+		    <artifactId>mapper-spring-boot-starter</artifactId>
+		    <version>1.1.0</version>
+		</dependency>   -->
+		<dependency>
+   			 <groupId>com.github.pagehelper</groupId>
+   			 <artifactId>pagehelper</artifactId>
+    		<version>4.1.6</version>
+		</dependency>
         <!-- Junit -->
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <version>4.12</version>
         </dependency>
-        
+		<dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.29</version>
+        </dependency>
+         <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>3.3.2</version>
+        </dependency>
+        <dependency>
+	        <groupId>commons-collections</groupId>
+	   		 <artifactId>commons-collections</artifactId>
+	   		 <version>3.2.2</version>
+        </dependency>
+        <dependency>
+        	<groupId>com.google.code.gson</groupId>
+        	<artifactId>gson</artifactId>
+        </dependency>
     </dependencies>
 </project>

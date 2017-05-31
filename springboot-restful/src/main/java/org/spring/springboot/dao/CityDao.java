@@ -32,4 +32,6 @@ public interface CityDao {
     Long updateCity(City city);
 
     Long deleteCity(Long id);
+
+	List<City> getCityList(City param);
 }

@@ -1,9 +1,6 @@
 package org.spring.springboot;
 
 import org.mybatis.spring.annotation.MapperScan;
-import org.spring.springboot.dao.CityDao;
-import org.spring.springboot.domain.City;
-import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.embedded.ConfigurableEmbeddedServletContainer;
@@ -36,7 +33,7 @@ public class Application  extends WebMvcConfigurerAdapter implements EmbeddedSer
 
 	@Override
 	public void customize(ConfigurableEmbeddedServletContainer container) {
-		container.setPort(8090);
+		container.setPort(8070);
 	}
 	
 	/**
@@ -48,5 +45,4 @@ public class Application  extends WebMvcConfigurerAdapter implements EmbeddedSer
 
         super.addResourceHandlers(registry);
     }
-
 }

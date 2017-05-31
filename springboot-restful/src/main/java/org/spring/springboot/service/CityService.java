@@ -1,6 +1,7 @@
 package org.spring.springboot.service;
 
 import org.spring.springboot.domain.City;
+import org.spring.springboot.domain.ResultEntity;
 
 import java.util.List;
 
@@ -49,4 +50,10 @@ public interface CityService {
      * @return
      */
     Long deleteCity(Long id);
+    /**
+     * 
+     * @param param
+     * @return
+     */
+	public ResultEntity<City> getCityList(City param);
 }

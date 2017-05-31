@@ -5,7 +5,7 @@ package org.spring.springboot.domain;
  *
  * Created by bysocket on 07/02/2017.
  */
-public class City {
+public class City extends QueryEntity{
 
     /**
      * 城市编号

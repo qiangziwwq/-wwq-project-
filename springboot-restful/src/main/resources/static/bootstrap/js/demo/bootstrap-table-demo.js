@@ -124,7 +124,7 @@ function buildTable($el, cells, rows) {
     $('#exampleTableFromData').bootstrapTable({
       data: bt_data,
       // mobileResponsive: true,
-      height: "250"
+      height: "400"
     });
   })();
 

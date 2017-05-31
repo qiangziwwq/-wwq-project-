@@ -2,9 +2,13 @@ package org.spring.springboot.service.impl;
 
 import org.spring.springboot.dao.CityDao;
 import org.spring.springboot.domain.City;
+import org.spring.springboot.domain.ResultEntity;
 import org.spring.springboot.service.CityService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
 
 import java.util.List;
 
@@ -41,5 +45,17 @@ public class CityServiceImpl implements CityService {
     public Long deleteCity(Long id) {
         return cityDao.deleteCity(id);
     }
+
+	@Override
+	public ResultEntity<City> getCityList(City param) {
+		//PageHelper.startPage(param.getPageNum(),param.getPageSize()); 
+		PageHelper.offsetPage(param.offset, param.limit, true); 
+		List<City>list=cityDao.getCityList(param);
+		PageInfo<City>pageInfo=new PageInfo<City>(list);
+		ResultEntity<City>result=new ResultEntity<City>(); 
+		result.setRows(pageInfo.getList());
+		result.setTotal(pageInfo.getTotal());
+		return result;
+	}
 
 }
