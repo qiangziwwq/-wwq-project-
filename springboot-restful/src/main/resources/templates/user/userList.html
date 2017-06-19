@@ -17,6 +17,7 @@
     <link href="/static/bootstrap/css/plugins/bootstrap-table/bootstrap-table.min.css" rel="stylesheet"/>
     <link href="/static/bootstrap/css/animate.css" rel="stylesheet"/>
     <link href="/static/bootstrap/css/style.css?v=4.1.0" rel="stylesheet"/>
+    <link href="/static/bootstrap/css/plugins/iCheck/custom.css" rel="stylesheet"/>
 </head>
 <body class="gray-bg">
     <div class="wrapper wrapper-content animated fadeInRight">
@@ -70,7 +71,8 @@
 						<!--  -->
 							<div id="toolbar" class="btn-group">
 								<button id="btn_add" type="button" class="btn btn-default">
-									<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>新增
+									<!-- <a data-toggle="modal" class="btn btn-primary" href="form_basic.html#modal-form">打开登录窗口</a> -->
+									<span class="glyphicon glyphicon-plus" aria-hidden="true"></span><a data-toggle="modal" href="#modal-form">新增</a>
 								</button>
 								<button id="btn_edit" type="button" class="btn btn-default">
 									<span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>修改
@@ -88,6 +90,44 @@
         </div>
         <!-- End Panel Basic -->
     </div>
+    <!--弹出内容始  -->
+    <div id="modal-form" class="modal fade" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-sm-6 b-r">
+                            <h3 class="m-t-none m-b">登录</h3>
+                            <form role="form">
+                                <div class="form-group">
+                                    <label>用户名：</label>
+                                    <input type="email" placeholder="请输入用户名" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label>密码：</label>
+                                    <input type="password" placeholder="请输入密码" class="form-control">
+                                </div>
+                                <div>
+                                    <button class="btn btn-sm btn-primary pull-right m-t-n-xs" type="submit"><strong>登录</strong>
+                                    </button>
+                                    <label>
+                                        <input type="checkbox" class="i-checks">自动登录</label>
+                                </div>
+                            </form>
+                        </div>
+                       <!--  <div class="col-sm-6">
+                            <h4>还不是会员？</h4>
+                            <p>您可以注册一个账户</p>
+                            <p class="text-center">
+                                <a href="form_basic.html"><i class="fa fa-sign-in big-icon"></i></a>
+                            </p>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!--弹出内容结束  -->
     <!-- 全局js -->
     <script src="/static/bootstrap/js/jquery.min.js?v=2.1.4"></script>
     <script src="/static/bootstrap/js/bootstrap.min.js?v=3.3.6"></script>
@@ -99,6 +139,8 @@
     <script src="/static/bootstrap/js/plugins/bootstrap-table/locale/bootstrap-table-zh-CN.min.js"></script>
     <!-- Peity -->
    <!--  <script src="/static/bootstrap/js/demo/bootstrap-table-demo.js"></script> -->
+    <!-- iCheck -->
+    <script src="/static/bootstrap/js/plugins/iCheck/icheck.min.js"></script>
    <script type="text/javascript" src='/static/bootstrap/js/demo/table.js'></script>
 </body>
 

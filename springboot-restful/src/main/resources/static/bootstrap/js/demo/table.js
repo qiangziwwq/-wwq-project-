@@ -74,9 +74,9 @@ var TableInit = function () {
 	 
 	 oInit.Init = function () {
 	 //初始化页面上面的按钮事件
-		 $('#btn_add').bind('click',function(){
+		 /*$('#btn_add').bind('click',function(){
 			 alert("add"); 
-		 }); 
+		 }); */
 		 $('#btn_edit').bind('click',function(){
 			 alert("edit"); 
 		 }); 

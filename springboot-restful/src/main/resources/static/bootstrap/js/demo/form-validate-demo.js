@@ -16,8 +16,6 @@
             },
             errorClass: "help-block m-b-none",
             validClass: "help-block m-b-none"
-
-
         });
 
         //以下为官方示例
@@ -75,7 +73,12 @@
                         required: icon + "必须同意协议后才能注册",
                         element: '#agree-error'
                     }
+                },
+                submitHandler: function(form){
+                	alert("提交"); 
+                	return false; 
                 }
+                
             });
 
             // propose username by combining first- and lastname
