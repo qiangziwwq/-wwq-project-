@@ -18,11 +18,9 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
  */ 
 // Spring Boot 应用的标识
 @SpringBootApplication
-// mapper 接口类扫描包配置
 @MapperScan("org.spring.springboot.dao")
-@EnableWebMvc
 @EnableSwagger2
-public class Application  extends WebMvcConfigurerAdapter implements EmbeddedServletContainerCustomizer {
+public class Application {
 
     public static void main(String[] args) {
         // 程序启动入口
@@ -30,19 +28,5 @@ public class Application  extends WebMvcConfigurerAdapter implements EmbeddedSer
         SpringApplication.run(Application.class,args);
         
     }
-
-	@Override
-	public void customize(ConfigurableEmbeddedServletContainer container) {
-		container.setPort(8070);
-	}
 	
-	/**
-	 * 静态文件
-	 */
-	@Override
-    public void addResourceHandlers(ResourceHandlerRegistry registry) {
-        registry.addResourceHandler("/static/**").addResourceLocations("classpath:/static/");
-
-        super.addResourceHandlers(registry);
-    }
 }
