@@ -1,16 +1,12 @@
 package org.spring.springboot.controller;
 
-import java.io.UnsupportedEncodingException;
-import java.net.URLDecoder;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Random;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import org.spring.springboot.domain.City;
-import org.spring.springboot.domain.QueryEntity;
 import org.spring.springboot.domain.ResultEntity;
 import org.spring.springboot.domain.TestEntity;
 import org.spring.springboot.service.CityService;
@@ -19,10 +15,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
-
-import com.google.gson.JsonObject;
-
-import net.minidev.json.JSONObject;
 
 
 /**
